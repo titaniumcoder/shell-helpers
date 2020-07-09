@@ -1,2 +1,2 @@
 FROM ubuntu:20.04
-RUN apt update && apt install -yq curl vim awscli
+RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -yq curl vim awscli
