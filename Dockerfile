@@ -3,4 +3,4 @@ RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -o Dpkg::Options::=
 RUN curl -s "https://get.sdkman.io" | bash
 RUN curl -L https://github.com/lihaoyi/Ammonite/releases/download/2.2.0/2.13-2.2.0 > /usr/local/bin/amm && chmod +x /usr/local/bin/amm
 SHELL ["/bin/bash", "-c"] 
-RUN source /root/.sdkman/bin/sdkman-init.sh && sdk install sbt && sdk install java && sdk install scala
+RUN source /root/.sdkman/bin/sdkman-init.sh && sdk install java
