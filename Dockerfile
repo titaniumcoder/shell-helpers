@@ -8,3 +8,4 @@ RUN wget https://archive.apache.org/dist/kafka/2.7.0/kafka_2.13-2.7.0.tgz
 RUN tar xvfz kafka_2.13-2.7.0.tgz
 RUN rm kafka_2.13-2.7.0.tgz
 RUN echo 'export PATH=$PATH:/kafka_2.13-2.7.0/bin/' >> ~/.bashrc
+ENV KAFKA_HEAP_OPTS="-Xms512m -Xmx1g"
